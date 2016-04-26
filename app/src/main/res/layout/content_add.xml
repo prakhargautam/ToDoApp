@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.prakhargautam.todoapp.AddActivity"
+    tools:showIn="@layout/activity_add">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:text="Priority" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:orientation="horizontal"
+            android:checkedButton="@+id/normal">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/high"
+                android:text="High"
+                android:onClick="onRadioButtonClicked" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/normal"
+                android:text="Normal"
+                android:onClick="onRadioButtonClicked"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/low"
+                android:text="Low"
+                android:onClick="onRadioButtonClicked"/>
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/text_margin"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:text="Comments" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/comment"
+            android:layout_marginLeft="20dp"
+            android:hint="Add Comment"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/text_margin"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:text="Due Date" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/date_select"
+                android:text="Select Date"
+                android:onClick="showDatePickerDialog"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="5"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:text="Tag" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="wrap_content"
+                android:text="Add Tag..."
+                android:layout_gravity="bottom"
+                android:gravity="end"
+                android:layout_marginTop="@dimen/text_margin" />
+
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:text="+"
+                android:id="@+id/add_tag"
+                android:layout_marginRight="15dp"/>
+
+
+
+        </LinearLayout>
+        <Spinner
+            android:id="@+id/choose_tag"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </Spinner>
+
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>
